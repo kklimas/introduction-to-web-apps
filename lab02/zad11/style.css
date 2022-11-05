@@ -1,0 +1,123 @@
+
+body {
+    margin: 0;
+    background-color: greenyellow;
+}
+
+.container {
+    width: 30vw;
+    height: fit-content;
+    margin: 5vh auto;
+    border-radius: 3%;
+    background-color: rgb(255, 77, 77);
+    color: white;
+}
+
+li {
+    width: 100%;
+    margin: 0;
+    padding: 2vh 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 2vh 0;
+}
+
+ul li ul {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+
+.first-level {
+    width: 100%;
+}
+
+label {
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+input[type=radio]:checked {
+    background: white;
+}
+
+input[type=radio]:checked + label ul {
+    display: inline;
+    position: relative;
+}
+
+ul li ul li:hover {
+    background-image: linear-gradient(180deg, rgb(2, 0, 134) 50%, rgb(73, 73, 156) 50%);
+    padding-left: 2vw;
+}
+
+
+
+ul li ul li {
+    padding-left: 10%;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1vw;
+    background-color: rgb(39, 0, 146);
+}
+
+ul li ul li:hover::before {
+    position: absolute;
+    content: '';
+    top: 10%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 0.8vh solid greenyellow;
+    border-bottom: 2.5vh solid transparent;
+    border-top: 2.5vh solid transparent;
+}
+
+.container > ul > li:hover ul::after {
+    position: absolute;
+    content: '';
+    top: 1.9vh;
+    left: 15vw;
+    width: 0;
+    height: 0;
+    border-left: 1vh solid transparent;
+    border-right: 1vh solid transparent;
+    border-top: 2vh solid rgb(255, 77, 77);
+}
+
+ul li ul {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+input {
+    display: none;
+}
+
+span {
+    margin-left: 2vw;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 60vw;
+    }
+
+    ul li ul:hover::after {
+        left: 35vw;
+    }
+}

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    padding: 24px;
+    width: 100%;
+    height: 200vh;
+    background-color: rgb(238, 238, 238);
+}
+
+.call-box {
+    width: 100%;
+    height: 800px;
+    background-color: rgb(8, 26, 83);
+}
+
+.caller-img img{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    border-radius: 8px;
+    width: 80px;
+    height: 100px;
+    z-index: 999;
+}
+.tool {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    top: 524px;
+    width: 32px;
+    height: 248px;
+    background-color: white;
+    border-radius: 20px;
+}
+.dot {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 50%;
+}
+.dot:hover {
+    cursor: pointer;
+}
+.blue {
+    border: none;
+    background-color: rgb(73, 107, 218);
+}
+.main-img {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.manage-call {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 724px;
+    width: 100%;
+    height: 50px;
+}
+.manage-call-box {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    height: 100%;
+}
+.manage-call-box button {
+    width: 60px;
+    height: 60px;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    color: rgb(73, 107, 218);
+}
+.red {
+    background-color: crimson !important;
+    color: white !important;
+}
+
+.manage-call-box button:hover {
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+}
+
+@media screen and (max-width: 1200px) {
+    .call-box {
+        height: 600px;
+    }
+    .tool {
+        top: 474px;
+        width: 16px;
+        height: 128px;
+    }
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    .manage-call {
+        top: 524px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .call-box {
+        height: 400px;
+    }
+    .tool {
+        top: 274px;
+    }
+    .manage-call {
+        top: 344px;
+    }
+    .manage-call-box {
+        width: 200px;
+    }
+    .manage-call button {
+        width: 40px;
+        height: 40px;
+    }
+}
