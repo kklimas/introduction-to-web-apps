@@ -1,0 +1,28 @@
+<mat-card class="card">
+    <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title>{{ journey.name }}</mat-card-title>
+            <mat-card-subtitle>{{ journey.country }}</mat-card-subtitle>
+            <mat-card-subtitle><span>Start date: </span> {{ journey.startDate }}</mat-card-subtitle>
+            <mat-card-subtitle><span>End date: </span> {{ journey.endDate }}</mat-card-subtitle>
+            <mat-card-subtitle><span>Tickets left: </span> {{ journey.ticketsLeft }}</mat-card-subtitle>
+            <mat-card-subtitle><span>Cost: </span> {{ journey.cost }}$</mat-card-subtitle>
+            <img *ngIf="!isSmallWidth" mat-card-xl-image [src]="journey.img" />
+        </mat-card-title-group>
+    </mat-card-header>
+    <img class="card-img" *ngIf="isSmallWidth" mat-card-xl-image [src]="journey.img" />
+    <mat-card-content>
+        {{ journey.description }}
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="action-box">
+            <div>
+                <button mat-button matTooltip="Add journey's ticket to your shopping basket">ADD</button>
+                <button mat-button matTooltip="Remove journey's ticket from your shopping basket">REMOVE</button>
+            </div>
+            <button mat-mini-fab color="warn" matTooltip="Delete journey from the list" aria-label="Delete icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+        </div>
+    </mat-card-actions>
+</mat-card>

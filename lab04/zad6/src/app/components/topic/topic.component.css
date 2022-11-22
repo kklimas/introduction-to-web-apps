@@ -1,0 +1,11 @@
+.card {
+    width: 200px;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+}
+.card button {
+    padding: 8px 16px;
+    cursor: pointer;
+}

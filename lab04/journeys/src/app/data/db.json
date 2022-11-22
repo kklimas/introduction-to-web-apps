@@ -1,0 +1,133 @@
+{
+    "journeys": [
+        {
+            "name": "journey-1",
+            "country": "Spain",
+            "cost": 1500.00,
+            "startDate": "2020-12-05",
+            "endDate": "2020-12-15",
+            "ticketsLeft": 22,
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates.",
+            "img": "/assets/images/spain.jpg"
+        },
+        {
+            "name": "journey-2",
+            "country": "Malesia",
+            "cost": 10500.00,
+            "startDate": "2020-12-05",
+            "endDate": "2020-12-15",
+            "ticketsLeft": 32,
+            "img": "/assets/images/malesia.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        },
+        {
+            "name": "journey-3",
+            "country": "Portugal",
+            "cost": 1300.00,
+            "startDate": "2020-12-15",
+            "img": "/assets/images/portugal.jpg",
+            "endDate": "2020-12-24",
+            "ticketsLeft": 11,
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        },
+        {
+            "name": "journey-4",
+            "country": "Poland",
+            "cost": 500.00,
+            "startDate": "2020-12-05",
+            "endDate": "2020-12-15",
+            "ticketsLeft": 15,
+            "img": "/assets/images/poland.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        },
+        {
+            "name": "journey-5",
+            "country": "Germany",
+            "cost": 1100.00,
+            "startDate": "2020-12-05",
+            "endDate": "2020-12-10",
+            "ticketsLeft": 16,
+            "img": "/assets/images/germany.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        },
+        {
+            "name": "journey-6",
+            "country": "China",
+            "cost": 8300.00,
+            "startDate": "2020-12-15",
+            "endDate": "2020-12-24",
+            "ticketsLeft": 55,
+            "img": "/assets/images/china.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        },
+        {
+            "name": "journey-7",
+            "country": "Spain",
+            "cost": 1200.00,
+            "startDate": "2020-12-05",
+            "endDate": "2020-12-15",
+            "ticketsLeft": 22,
+            "img": "/assets/images/spain.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        },
+        {
+            "name": "journey-8",
+            "country": "Croatia",
+            "cost": 1800.00,
+            "startDate": "2020-12-05",
+            "endDate": "2020-12-10",
+            "ticketsLeft": 10,
+            "img": "/assets/images/spain.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        },
+        {
+            "name": "journey-9",
+            "country": "Poland",
+            "cost": 300.00,
+            "startDate": "2020-12-15",
+            "endDate": "2020-12-24",
+            "ticketsLeft": 11,
+            "img": "/assets/images/spain.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        },
+        {
+            "name": "journey-10",
+            "country": "Spain",
+            "cost": 1200.00,
+            "startDate": "2020-12-05",
+            "endDate": "2020-12-15",
+            "ticketsLeft": 43,
+            "img": "/assets/images/spain.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        },
+        {
+            "name": "journey-11",
+            "country": "Croatia",
+            "cost": 1800.00,
+            "startDate": "2020-12-05",
+            "endDate": "2020-12-10",
+            "ticketsLeft": 5,
+            "img": "/assets/images/spain.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        },
+        {
+            "name": "journey-12",
+            "country": "Poland",
+            "cost": 300.00,
+            "startDate": "2020-12-15",
+            "endDate": "2020-12-24",
+            "ticketsLeft": 10,
+            "img": "/assets/images/spain.jpg",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
+        
+        }
+    ]
+}
