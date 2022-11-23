@@ -1,13 +1,55 @@
-div {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+div, form{
     padding: 16px 32px;
 }
 .content {
     display: flex;
-    gap: 24px;
+    gap: 8px;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .content mat-form-field {
     min-width: 250px;
     width: 30%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row mat-form-field {
+    width: 48%;
+}
+.full-width input{
+    width: 100%;
+}
+.right-align {
+    text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        gap: 0;
+    }
+    .row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .row-first {
+        margin-top: 16px;
+    }
+    .row mat-form-field {
+        width: 90%;
+    }
 }

@@ -20,7 +20,7 @@
                 <button mat-button matTooltip="Add journey's ticket to your shopping basket">ADD</button>
                 <button mat-button matTooltip="Remove journey's ticket from your shopping basket">REMOVE</button>
             </div>
-            <button mat-mini-fab color="warn" matTooltip="Delete journey from the list" aria-label="Delete icon">
+            <button (click)="openDeleteDialog()" mat-mini-fab color="warn" matTooltip="Delete journey from the list" aria-label="Delete icon">
                 <mat-icon>delete</mat-icon>
               </button>
         </div>

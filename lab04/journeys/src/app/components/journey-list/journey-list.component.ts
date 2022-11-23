@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Journey } from 'src/app/models/Journey';
 import { JourneyDataService } from 'src/app/services/journey-data.service';
 
@@ -9,7 +9,6 @@ import { JourneyDataService } from 'src/app/services/journey-data.service';
 })
 export class JourneyListComponent {
   displayedColumns: string[] = ['name', 'country', 'cost', 'startDate', 'endDate']
-  
   journeys: Journey[];
   
   

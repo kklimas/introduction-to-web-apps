@@ -20,8 +20,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDatepickerModule } from '@angular/material/datepicker'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSortModule } from '@angular/material/sort';
+import { RemoveJourneyDialogComponent } from './components/modals/remove-journey-dialog/remove-journey-dialog.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { MatSortModule } from '@angular/material/sort';
     AddJourneyModalComponent,
     NavbarComponent,
     BreadcrumbComponent,
+    RemoveJourneyDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,9 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     FormsModule,
     MatSortModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    ReactiveFormsModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],

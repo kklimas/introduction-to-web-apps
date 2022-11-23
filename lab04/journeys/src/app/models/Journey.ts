@@ -1,4 +1,5 @@
 export class Journey {
+    id: number;
     name: string;
     country: string;
     ticketsLeft: number;

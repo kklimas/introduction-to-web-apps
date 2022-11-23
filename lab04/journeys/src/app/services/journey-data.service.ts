@@ -15,4 +15,16 @@ export class JourneyDataService {
   getJourneys(): Observable<Journey[]> {
     return this.httpClient.get<Journey[]>(`${this.BASE_URL}${this.JOURNEYS}`);
   }
+
+  addJourney(journey: Journey): Observable<Journey> {
+    this.getJourneys().subscribe(data => {
+      data = data.sort((a, b) => b.id - a.id)
+      journey.id = data.length > 0 ? data[0].id + 1: 0;
+    })
+    return this.httpClient.post<Journey>(`${this.BASE_URL}${this.JOURNEYS}`, journey);  
+  }
+
+  deleteJourney(id: number): Observable<Journey> {
+    return this.httpClient.delete<Journey>(`${this.BASE_URL}${this.JOURNEYS}/${id}`);
+  }
 }
