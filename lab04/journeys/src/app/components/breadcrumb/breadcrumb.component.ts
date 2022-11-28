@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Journey } from 'src/app/models/Journey';
+import { JourneyDataService } from 'src/app/services/journey-data.service';
 import { AddJourneyModalComponent } from '../modals/add-journey-modal/add-journey-modal.component';
 
 @Component({
@@ -9,14 +10,15 @@ import { AddJourneyModalComponent } from '../modals/add-journey-modal/add-journe
   styleUrls: ['./breadcrumb.component.css']
 })
 export class BreadcrumbComponent {
-  @Output() journeyAdded: EventEmitter<any> = new EventEmitter<any>();
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    private journeyDataService: JourneyDataService) {}
 
   openDialog() {
     this.dialog.open(AddJourneyModalComponent)
       .afterClosed().subscribe(added  => {
         if (added) {
-          this.journeyAdded.emit();
+          this.journeyDataService.refresh.emit();
         }
       });
   }

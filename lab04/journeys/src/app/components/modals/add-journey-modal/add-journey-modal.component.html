@@ -1,7 +1,7 @@
 <form class="dialog" [formGroup]="journeyForm" (ngSubmit)="onFormSubmit()">
   <h1 mat-dialog-title>Add new journey</h1>
   <div class="content" mat-dialog-content>
-    <div class="row row-first">
+    <div class="row">
       <mat-form-field>
         <mat-label>Name</mat-label>
         <input formControlName="name" matInput >
@@ -12,8 +12,6 @@
         <input formControlName="country" matInput >
         <mat-error *ngIf="country.invalid"></mat-error>
       </mat-form-field>
-    </div>
-    <div class="row">
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Cost</mat-label>
         <input formControlName="cost" matInput type="number" class="right-align">
@@ -21,36 +19,32 @@
         <span matTextPrefix>$&nbsp;</span>
         <span matTextSuffix>.00</span>
       </mat-form-field>
+    </div>
+    <div class="row">
       <mat-form-field>
         <mat-label>Available tickets</mat-label>
         <input formControlName="tickets" matInput >
         <mat-error *ngIf="tickets.invalid"></mat-error>
       </mat-form-field>
-    </div>
-    <div class="row">
       <mat-form-field appearance="fill">
-        <mat-label>Choose start date</mat-label>
-        <input formControlName="startDate" matInput [matDatepicker]="startDate">
-        <mat-hint>mm/dd/yyyy</mat-hint>
+        <mat-label>Start date</mat-label>
+        <input (ngModelChange)="startDateChange()" formControlName="startDate" [min]="minStartDate" [max]="maxDate" matInput [matDatepicker]="startDate">
         <mat-datepicker-toggle matIconSuffix [for]="startDate"></mat-datepicker-toggle>
         <mat-datepicker #startDate></mat-datepicker>
       </mat-form-field>
       <mat-form-field appearance="fill">
-        <mat-label>Choose end date</mat-label>
-        <input formControlName="endDate" matInput [matDatepicker]="endDate">
-        <mat-hint>mm/dd/yyyy</mat-hint>
+        <mat-label>End date</mat-label>
+        <input (ngModelChange)="endDateChange()" formControlName="endDate" [min]="minEndDate" matInput [matDatepicker]="endDate">
         <mat-datepicker-toggle matIconSuffix [for]="endDate"></mat-datepicker-toggle>
         <mat-datepicker #endDate></mat-datepicker>
       </mat-form-field>
     </div>
-    <div class="row full-width">
+    <div class="row">
       <mat-form-field >
         <mat-label>Image url</mat-label>
         <input formControlName="img" matInput >
         <mat-error *ngIf="img.invalid"></mat-error>
       </mat-form-field>
-    </div>
-    <div class="row full-width">
       <mat-form-field appearance="fill">
         <mat-label>Description</mat-label>
         <textarea formControlName="description" matInput></textarea>
@@ -59,7 +53,7 @@
     </div>
   </div>
   <div mat-dialog-actions>
-    <button type="submit" mat-button [matDialogClose]="true">Add</button>
+    <button [disabled]="journeyForm.invalid" type="submit" mat-button [matDialogClose]="true">Add</button>
     <button mat-button mat-dialog-close [matDialogClose]="false" color="warn">Close</button>
   </div>
 </form>

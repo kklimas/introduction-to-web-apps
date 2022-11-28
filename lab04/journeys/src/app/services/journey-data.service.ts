@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Journey } from '../models/Journey';
@@ -9,6 +9,8 @@ import { Journey } from '../models/Journey';
 export class JourneyDataService {
   private BASE_URL = 'http://localhost:3000'
   private JOURNEYS = '/journeys'
+
+  refresh: EventEmitter<any> = new EventEmitter();
 
   constructor(private httpClient: HttpClient) {}
 

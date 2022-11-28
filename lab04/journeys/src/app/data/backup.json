@@ -5,8 +5,8 @@
             "name": "journey-1",
             "country": "Poland",
             "cost": 1100,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-10",
+            "startDate": "2022-12-05",
+            "endDate": "2022-12-10",
             "ticketsLeft": 16,
             "img": "/assets/images/poland.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
@@ -16,8 +16,8 @@
             "name": "journey-2",
             "country": "Spain",
             "cost": 3100,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-10",
+            "startDate": "2022-12-05",
+            "endDate": "2022-12-10",
             "ticketsLeft": 17,
             "img": "/assets/images/spain.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
@@ -27,8 +27,8 @@
             "name": "journey-3",
             "country": "China",
             "cost": 5500,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-10",
+            "startDate": "2022-12-05",
+            "endDate": "2022-12-10",
             "ticketsLeft": 16,
             "img": "/assets/images/china.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
@@ -38,8 +38,8 @@
             "name": "journey-4",
             "country": "Malesia",
             "cost": 11500,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-10",
+            "startDate": "2022-12-05",
+            "endDate": "2022-12-10",
             "ticketsLeft": 16,
             "img": "/assets/images/malesia.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
@@ -49,8 +49,8 @@
             "name": "journey-5",
             "country": "Germany",
             "cost": 1100,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-10",
+            "startDate": "2022-12-05",
+            "endDate": "2022-12-10",
             "ticketsLeft": 16,
             "img": "/assets/images/germany.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
@@ -60,8 +60,8 @@
             "name": "journey-6",
             "country": "China",
             "cost": 8300,
-            "startDate": "2020-12-15",
-            "endDate": "2020-12-24",
+            "startDate": "2022-12-15",
+            "endDate": "2022-12-24",
             "ticketsLeft": 55,
             "img": "/assets/images/china.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
@@ -69,12 +69,12 @@
         {
             "id": 6,
             "name": "journey-7",
-            "country": "Spain",
-            "cost": 1200,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-15",
+            "country": "Brazil",
+            "cost": 12000,
+            "startDate": "2022-12-05",
+            "endDate": "2022-12-15",
             "ticketsLeft": 22,
-            "img": "/assets/images/spain.jpg",
+            "img": "/assets/images/brazil.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
         },
         {
@@ -82,8 +82,8 @@
             "name": "journey-8",
             "country": "Croatia",
             "cost": 1800,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-10",
+            "startDate": "2022-12-05",
+            "endDate": "2022-12-10",
             "ticketsLeft": 10,
             "img": "/assets/images/spain.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
@@ -91,34 +91,23 @@
         {
             "id": 8,
             "name": "journey-9",
-            "country": "Poland",
+            "country": "Italy",
             "cost": 300,
-            "startDate": "2020-12-15",
-            "endDate": "2020-12-24",
+            "startDate": "2022-12-15",
+            "endDate": "2022-12-24",
             "ticketsLeft": 11,
-            "img": "/assets/images/spain.jpg",
+            "img": "/assets/images/italy.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
         },
         {
             "id": 9,
             "name": "journey-10",
-            "country": "Spain",
+            "country": "Norway",
             "cost": 1200,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-15",
+            "startDate": "2022-12-05",
+            "endDate": "2022-12-15",
             "ticketsLeft": 43,
-            "img": "/assets/images/spain.jpg",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
-        },
-        {
-            "id": 10,
-            "name": "journey-11",
-            "country": "Croatia",
-            "cost": 1800,
-            "startDate": "2020-12-05",
-            "endDate": "2020-12-10",
-            "ticketsLeft": 5,
-            "img": "/assets/images/spain.jpg",
+            "img": "/assets/images/norway.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
         }
     ]

@@ -9,3 +9,12 @@ export class Journey {
     description: string;
     img: string;
 }
+
+export class JourneyFilter {
+    query: string = '';
+    countries: string[] = [];
+    startDate: Date;
+    endDate: Date;
+    minCost: number;
+    maxCost: number;
+}

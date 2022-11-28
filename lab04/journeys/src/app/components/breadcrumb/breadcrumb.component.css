@@ -3,3 +3,7 @@ mat-toolbar {
     font-size: 2rem;
     height: 70px;
 }
+button {
+    padding: 16px 32px;
+    font-size: 1rem;
+}

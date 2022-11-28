@@ -1,4 +1,19 @@
-<div class="flex-box">
-  <app-journey-card (journeyDeleted)="getJourneys()" [journey]="j" *ngFor="let j of journeys"></app-journey-card>
+<div class="box">
+  <h1>Filter tours</h1>
+  <app-journey-filter
+    (filterEvent)="filterChange($event)"
+    [countries]="countries"
+    [minCost]="minCost"
+    [maxCost]="maxCost"
+  ></app-journey-filter>
+  <h1>Journeys list</h1>
+  <div class="flex-box">
+    <app-journey-card
+      (journeyDeleted)="getJourneys()"
+      [journey]="j"
+      [minCost]="minCost"
+      [maxCost]="maxCost"
+      *ngFor="let j of filteredJourneys | journeyFilter: filter"
+    ></app-journey-card>
+  </div>
 </div>
-

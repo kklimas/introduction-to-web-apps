@@ -24,6 +24,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSortModule } from '@angular/material/sort';
 import { RemoveJourneyDialogComponent } from './components/modals/remove-journey-dialog/remove-journey-dialog.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ToastrModule } from 'ngx-toastr';
+import { ShoppingBasketComponent } from './components/shopping-basket/shopping-basket.component';
+import { JourneyFilterPipe } from './data/pipes/journey-filter.pipe';
+import { JourneyFilterComponent } from './components/journey-filter/journey-filter.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -34,6 +41,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     NavbarComponent,
     BreadcrumbComponent,
     RemoveJourneyDialogComponent,
+    ShoppingBasketComponent,
+    JourneyFilterPipe,
+    JourneyFilterComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +64,11 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSortModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ToastrModule.forRoot(),
+    MatSliderModule,
+    MatOptionModule, 
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
