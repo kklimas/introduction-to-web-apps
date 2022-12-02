@@ -110,5 +110,42 @@
             "img": "/assets/images/norway.jpg",
             "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates."
         }
+    ],
+    "journey-comments": [
+        {
+            "id": 0,
+            "journeyId": 0,
+            "username": "jack_black",
+            "text": "It was suuper journey!!! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates.",
+            "stars": 5
+        },
+        {
+            "id": 1,
+            "journeyId": 0,
+            "username": "adam_kowalski5",
+            "text": "Dont really like it :( Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates.",
+            "stars": 3
+        },
+        {
+            "id": 2,
+            "journeyId": 0,
+            "username": "adam_kowalski5",
+            "text": "Dont really like it :( Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates.",
+            "stars": 3
+        },
+        {
+            "id": 3,
+            "journeyId": 1,
+            "username": "nickki",
+            "text": "Dont really like it :( Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates.",
+            "stars": 1
+        },
+        {
+            "id": 4,
+            "journeyId": 2,
+            "username": "crazy_frog8",
+            "text": "Crazy :OO Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro officiis fugit, vel ullam expedita voluptatem sint beatae consequatur tempore maiores natus fugiat consequuntur, doloremque non, repellendus omnis commodi minus voluptates.",
+            "stars": 3
+        }
     ]
 }

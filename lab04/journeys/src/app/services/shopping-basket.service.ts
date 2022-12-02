@@ -10,9 +10,9 @@ export class ShoppingBasketService {
   change: EventEmitter<any> = new EventEmitter();
 
   getItems(): BasketItem[] {
-    let itemsKeys = Object.keys(localStorage);
+    let itemsKeys = Object.keys(sessionStorage);
     return itemsKeys.map(key => {
-      let i = localStorage.getItem(key);
+      let i = sessionStorage.getItem(key);
       if (i !== null) {
         return JSON.parse(i);
       }
@@ -20,9 +20,9 @@ export class ShoppingBasketService {
   }
 
   getItemsCount(): number {
-    let itemsKeys = Object.keys(localStorage);
+    let itemsKeys = Object.keys(sessionStorage);
     let counts = itemsKeys.map(key => {
-      let i = localStorage.getItem(key);
+      let i = sessionStorage.getItem(key);
       if (i !== null) {
         let item: BasketItem = JSON.parse(i);
         return item.count;
@@ -33,13 +33,13 @@ export class ShoppingBasketService {
   }
 
   addItem(journey: Journey) {
-    let item = localStorage.getItem(`${journey.id}`);
+    let item = sessionStorage.getItem(`${journey.id}`);
     if (item !== undefined && item !== null) {
       let i: BasketItem = JSON.parse(item);
       i.count++;
-      localStorage.setItem(`${journey.id}`, JSON.stringify(i));
+      sessionStorage.setItem(`${journey.id}`, JSON.stringify(i));
     } else {
-      localStorage.setItem(
+      sessionStorage.setItem(
         `${journey.id}`,
         JSON.stringify(this.mapToBasketItem(journey))
       );
@@ -48,25 +48,25 @@ export class ShoppingBasketService {
   }
 
   removeItem(id: number) {
-    let item = localStorage.getItem(`${id}`);
+    let item = sessionStorage.getItem(`${id}`);
     if (item !== undefined && item !== null) {
       let i: BasketItem = JSON.parse(item);
       if (i.count > 1) {
         i.count--;
-        localStorage.setItem(`${id}`, JSON.stringify(i));
+        sessionStorage.setItem(`${id}`, JSON.stringify(i));
       } else {
-        localStorage.removeItem(`${id}`);
+        sessionStorage.removeItem(`${id}`);
       }
     }
     this.changeDetected();
   }
 
   removeItemsOfGivenId(id: number) {
-    localStorage.removeItem(`${id}`);
+    sessionStorage.removeItem(`${id}`);
   }
 
   itemsInBasket(id: number) {
-    let item = localStorage.getItem(`${id}`);
+    let item = sessionStorage.getItem(`${id}`);
     if (item !== undefined && item !== null) {
       let i: BasketItem = JSON.parse(item);
       return i.count;
@@ -75,7 +75,7 @@ export class ShoppingBasketService {
   }
 
   canRemove(id: number): boolean {
-    let item = localStorage.getItem(`${id}`);
+    let item = sessionStorage.getItem(`${id}`);
     if (item === undefined || item === null) {
       return false;
     }

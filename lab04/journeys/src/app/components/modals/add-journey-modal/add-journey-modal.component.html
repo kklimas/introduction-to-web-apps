@@ -23,7 +23,7 @@
     <div class="row">
       <mat-form-field>
         <mat-label>Available tickets</mat-label>
-        <input formControlName="tickets" matInput >
+        <input formControlName="tickets" matInput type="number" class="right-align">
         <mat-error *ngIf="tickets.invalid"></mat-error>
       </mat-form-field>
       <mat-form-field appearance="fill">

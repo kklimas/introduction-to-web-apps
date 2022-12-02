@@ -7,7 +7,7 @@
     [maxCost]="maxCost"
   ></app-journey-filter>
   <h1>Journeys list</h1>
-  <div class="flex-box">
+  <div *ngIf="filteredJourneys.length > 0" class="flex-box">
     <app-journey-card
       (journeyDeleted)="getJourneys()"
       [journey]="j"
@@ -16,4 +16,5 @@
       *ngFor="let j of filteredJourneys | journeyFilter: filter"
     ></app-journey-card>
   </div>
+  <app-no-data-found *ngIf="filteredJourneys.length == 0"></app-no-data-found>
 </div>

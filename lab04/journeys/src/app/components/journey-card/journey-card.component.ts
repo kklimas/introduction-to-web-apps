@@ -4,6 +4,9 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material/dialog';
 import { RemoveJourneyDialogComponent } from '../modals/remove-journey-dialog/remove-journey-dialog.component';
 import { ShoppingBasketService } from 'src/app/services/shopping-basket.service';
+import { AddCommentDialogComponent } from '../modals/add-comment-dialog/add-comment-dialog.component';
+import { JourneyCommentService } from 'src/app/services/journey-comment.service';
+import { JourneyDataService } from 'src/app/services/journey-data.service';
 
 @Component({
   selector: 'app-journey-card',
@@ -12,6 +15,7 @@ import { ShoppingBasketService } from 'src/app/services/shopping-basket.service'
 })
 export class JourneyCardComponent implements OnInit {
   @Output() journeyDeleted: EventEmitter<Journey> = new EventEmitter<Journey>();
+  
   @Input() journey: Journey;
   @Input() minCost: number;
   @Input() maxCost: number
@@ -23,7 +27,9 @@ export class JourneyCardComponent implements OnInit {
   constructor(
     private responsive: BreakpointObserver,
     private dialog: MatDialog,
-    private shoppingBasketService: ShoppingBasketService
+    private shoppingBasketService: ShoppingBasketService,
+    private journeyCommentService: JourneyCommentService,
+    private journeyDataService: JourneyDataService
   ) {
     this.responsive.observe(Breakpoints.XSmall).subscribe((result) => {
       if (result.matches) {
@@ -48,6 +54,7 @@ export class JourneyCardComponent implements OnInit {
           this.journeyDeleted.emit(this.journey);
           this.shoppingBasketService.removeItemsOfGivenId(this.journey.id);
           this.shoppingBasketService.change.emit();
+          this.journeyCommentService.commentEvent.emit();
         }
       });
   }
@@ -78,5 +85,24 @@ export class JourneyCardComponent implements OnInit {
   }
   itemsInBasket() {
     return this.shoppingBasketService.itemsInBasket(this.journey.id);
+  }
+
+  openAddCommentDialog() {
+    this.dialog
+      .open(AddCommentDialogComponent, {
+        width: '500px',
+        data: this.journey,
+      })
+      .afterClosed()
+      .subscribe((added) => {
+        if (added) {
+          this.journeyCommentService.commentEvent.emit();
+          this.journeyDataService.refresh.emit();
+        }
+      });
+  }
+
+  array(n: number) {
+    return new Array(n);
   }
 }

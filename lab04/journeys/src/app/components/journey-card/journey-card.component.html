@@ -32,6 +32,9 @@
       <img *ngIf="!isSmallWidth" mat-card-xl-image [src]="journey.img" />
     </mat-card-title-group>
   </mat-card-header>
+  <div class="rating">
+    <mat-icon *ngFor="let i of array(journey.stars)">star</mat-icon>
+  </div>
   <img
     class="card-img"
     *ngIf="isSmallWidth"
@@ -61,15 +64,29 @@
           REMOVE
         </button>
       </div>
+      <div class="card-actions">
+        <button
+        (click)="openAddCommentDialog()"
+        mat-mini-fab
+        color="primary"
+        matTooltip="Add comment"
+        aria-label="Add comment icon"
+      >
+        <mat-icon>add_comment</mat-icon>
+      </button>
+
       <button
         (click)="openDeleteDialog()"
         mat-mini-fab
         color="warn"
-        matTooltip="Delete journey from the list"
+        matTooltip="Delete journey"
         aria-label="Delete icon"
       >
         <mat-icon>delete</mat-icon>
       </button>
+      </div>
+      
+      
     </div>
   </mat-card-actions>
 </mat-card>

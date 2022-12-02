@@ -16,6 +16,7 @@
 .reservated {
   padding: 4px;
   color: white;
+  border-radius: 2px;
 }
 .red {
   background-color: crimson;
@@ -43,6 +44,14 @@ mat-card-title-group img {
   margin-top: 32px;
   height: auto;
 }
+.rating {
+  margin-top: 8px;
+  margin-left: 12px;
+  min-height: 30px;
+}
+.rating mat-icon {
+  color: gold;
+}
 mat-card-subtitle:nth-child(3) {
   margin-top: 24px;
 }
@@ -62,4 +71,9 @@ mat-card-actions .action-box {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
 }

@@ -1,6 +1,8 @@
 import { Component, Output, Input, EventEmitter } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+import { debounceTime } from 'rxjs';
 import { JourneyFilter } from 'src/app/models/Journey';
+import { JourneyDataService } from 'src/app/services/journey-data.service';
 
 @Component({
   selector: 'app-journey-filter',
@@ -13,34 +15,52 @@ export class JourneyFilterComponent {
   @Input() maxCost: number;
   @Input() minCost: number; 
 
-  maxCostPercentage: number;
-  minCostPercentage: number;
+  filterForm: FormGroup;
 
-  filter: JourneyFilter = new JourneyFilter();
   minStartDate: Date;
   minEndDate: Date;
   maxDate: Date;
 
-  constructor() {
+  stars: number[] = [0, 1, 2, 3, 4, 5];
+
+  constructor(
+    private journeyDataService: JourneyDataService
+  ) {
     this.minStartDate = new Date();
     this.minEndDate = new Date();
     this.maxDate = new Date('2122-12-12');
-    
+    this.initForm();
+    this.journeyDataService.refresh.subscribe(() => this.clearFilters());
   }
 
-  startDateChange() {
-    this.minEndDate = this.filter.startDate;
-    this.filterChanged();
+  initForm() {
+    this.filterForm = new FormGroup({
+      query: new FormControl(''),
+      startDate: new FormControl(),
+      endDate: new FormControl(),
+      countries: new FormControl([]),
+      stars: new FormControl([]),
+      minCost: new FormControl(this.minCost),
+      maxCost: new FormControl(this.maxCost)
+    })
+
+    this.filterForm.valueChanges
+      .pipe(debounceTime(500))
+      .subscribe(data => this.filterEvent.emit(data))
   }
-  endDateChange() {
-    this.maxDate = this.filter.endDate;
-    this.filterChanged();
+
+  formController(name: string) {
+    return this.filterForm.get(name)?.value
   }
+
   clearFilters() {
-    this.filter = new JourneyFilter();
-    this.filterChanged();
+    this.filterForm.reset();
+    let j = new JourneyFilter();
+    j.minCost = this.minCost;
+    j.maxCost = this.maxCost;
+    this.filterForm.get('minCost')?.setValue(this.minCost);
+    this.filterForm.get('maxCost')?.setValue(this.maxCost);
+    this.filterEvent.emit(j);
   }
-  filterChanged() {
-    this.filterEvent.emit(this.filter);
-  }
+  
 }

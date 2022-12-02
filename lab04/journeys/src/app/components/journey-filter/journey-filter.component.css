@@ -1,3 +1,6 @@
+.right-align {
+    text-align: right;
+}
 .box {
     -webkit-box-shadow: 10px 10px 28px 0px rgba(186,186,186,1);
   -moz-box-shadow: 10px 10px 28px 0px rgba(186,186,186,1);
@@ -8,8 +11,14 @@
 .right-align {
     text-align: right;
 }
+mat-icon {
+    color: gold;
+  }
 .costRange {
     position: relative;
+    display: flex;
+    width: 100%;
+    
 }
 .clearBtn {
     margin-top: 32px;
@@ -19,10 +28,8 @@
 .inputs {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 32px;
-}
-.reversed {   
-    transform: rotate(180deg);
 }
 
 @media screen and (max-width: 900px) {

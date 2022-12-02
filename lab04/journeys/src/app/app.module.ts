@@ -31,6 +31,10 @@ import { JourneyFilterComponent } from './components/journey-filter/journey-filt
 import { MatSliderModule } from '@angular/material/slider';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { JourneyCommentComponent } from './components/journey-comment/journey-comment.component';
+import { JourneyCommentListComponent } from './components/journey-comment-list/journey-comment-list.component';
+import { NoDataFoundComponent } from './components/no-data-found/no-data-found.component';
+import { AddCommentDialogComponent } from './components/modals/add-comment-dialog/add-comment-dialog.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,10 @@ import { MatSelectModule } from '@angular/material/select';
     ShoppingBasketComponent,
     JourneyFilterPipe,
     JourneyFilterComponent,
+    JourneyCommentComponent,
+    JourneyCommentListComponent,
+    NoDataFoundComponent,
+    AddCommentDialogComponent,
   ],
   imports: [
     BrowserModule,
