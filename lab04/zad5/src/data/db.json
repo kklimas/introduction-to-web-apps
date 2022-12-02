@@ -1,0 +1,48 @@
+[
+    {
+        "mark": "Toyota",
+        "model": "Aygo X",
+        "colors": [
+            "red",
+            "green",
+            "black"
+        ]
+    },
+    {
+        "mark": "Toyota",
+        "model": "C-HR",
+        "colors": [
+            "red",
+            "green",
+            "black",
+            "yellow"
+        ]
+    },
+    {
+        "mark": "Toyota",
+        "model": "Corolla Cross",
+        "colors": [
+            "red",
+            "gray",
+            "black",
+            "purple"
+        ]
+    },
+    {
+        "mark": "BMW",
+        "model": "i7",
+        "colors": [
+            "black",
+            "aquamarine"
+        ]
+    },
+    {
+        "mark": "BMW",
+        "model": "X4",
+        "colors": [
+            "black",
+            "aquamarine",
+            "purple"
+        ]
+    }
+]

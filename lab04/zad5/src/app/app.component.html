@@ -1,0 +1,14 @@
+<div>
+    <select name="mark" [(ngModel)]="chosenMark" (ngModelChange)="markChange()">
+        <option *ngFor="let mark of marks" [value]="mark">{{mark}}</option>
+    </select>
+    <select *ngIf="isMarkChosen" name="model" [(ngModel)]="chosenModel" (ngModelChange)="modelChange()">
+        <option *ngFor="let car of markModels" [ngValue]="car">{{car.model}}</option>
+    </select>
+    <select *ngIf="isModelChosen" name="color" [(ngModel)]="chosenColor" (ngModelChange)="colorChange()">
+        <option *ngFor="let color of chosenModel.colors" [ngValue]="color">{{color}}</option>
+    </select>
+    <div *ngIf="isColorChosen">
+        <h2>You have picked car of mark: {{chosenMark}}, model: {{chosenModel.model}} and color: {{chosenColor}}</h2>
+    </div>
+</div>
