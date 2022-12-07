@@ -1,0 +1,29 @@
+h1 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+.box {
+    text-align: center;
+    padding: 16px;
+}
+.sum-up {
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(78, 78, 78);
+}
+.summary {
+    display: flex;
+    justify-content: space-around;
+}
+p {
+    padding: 4px;
+}
+.red {
+    background-color: crimson;
+    color: white;
+}
+.green {
+    background-color: green;
+    color: white;
+}

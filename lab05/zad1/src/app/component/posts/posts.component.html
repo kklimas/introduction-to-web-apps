@@ -1,0 +1,17 @@
+<h1>POSTS</h1>
+<div class="posts">
+    <div class="post" *ngFor="let post of posts">
+        <h4>{{post.title}}</h4>
+        <h5>User ID: {{post.userId}}</h5>
+        <p>{{post.body}}</p>
+    </div>
+</div>
+<h2>ADD POST</h2>
+<div class="form-box">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <input formControlName="title" type="text" placeholder="Title">
+        <textarea formControlName="content" rows="5" placeholder="Content"></textarea>
+        <input formControlName="userId" type="number" min="0" placeholder="User ID">    
+        <button type="submit" mat-raised-button color="primary">Add</button>
+    </form>
+</div>

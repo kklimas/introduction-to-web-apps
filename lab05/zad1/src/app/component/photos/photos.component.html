@@ -1,0 +1,9 @@
+<h1>PHOTOS</h1>
+<div class="photos">
+    <div class="photo" *ngFor="let photo of photos">
+        <h4>{{photo.title}}</h4>
+        <h5>Album ID: {{photo.albumId}}</h5>
+        <img [src]="photo.thumbnailUrl" alt="Image">
+        <button routerLink="{{photo.id}}" mat-raised-button color="primary">Details</button>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.toolbar {
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.action-btn {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  margin: 48px;
+  padding: 24px;
+  -webkit-box-shadow: 10px 10px 36px 1px rgba(196,196,196,1);
+  -moz-box-shadow: 10px 10px 36px 1px rgba(196,196,196,1);
+  box-shadow: 10px 10px 36px 1px rgba(196,196,196,1);
+}

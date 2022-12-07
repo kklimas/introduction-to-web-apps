@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span>App</span>
+  <div class="action-btn">
+    <button routerLink="/home" mat-icon-button class="icon favorite-icon" aria-label="Icon">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button routerLink="/posts" mat-icon-button class="icon" aria-label="Icon">
+      <mat-icon>message</mat-icon>
+    </button>
+    <button routerLink="/photos" mat-icon-button class="icon" aria-label="Icon">
+      <mat-icon> insert_photo</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

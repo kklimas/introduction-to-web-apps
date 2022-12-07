@@ -1,0 +1,31 @@
+* {
+    text-align: center;
+}
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.post {
+    max-width: 200px;
+    border: 1px solid black;
+    padding: 8px;
+}
+form {
+    margin-top: 32px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+input, textarea {
+    font-size: 1.4rem;
+}
+.form-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
